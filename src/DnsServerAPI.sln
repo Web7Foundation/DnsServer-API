@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{53FF54AE-6A3D-4C86-BB99-D626DCACA05C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DnsServerAPI", "DnsServerAPI\DnsServerAPI.csproj", "{57F6A8B8-8BA2-4D75-A786-D5180FEF446D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZonesExample", "Examples\ZonesExample\ZonesExample.csproj", "{2C4133D8-93C4-4A0A-946F-F2E6ECD7B0A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57F6A8B8-8BA2-4D75-A786-D5180FEF446D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57F6A8B8-8BA2-4D75-A786-D5180FEF446D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57F6A8B8-8BA2-4D75-A786-D5180FEF446D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57F6A8B8-8BA2-4D75-A786-D5180FEF446D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C4133D8-93C4-4A0A-946F-F2E6ECD7B0A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C4133D8-93C4-4A0A-946F-F2E6ECD7B0A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C4133D8-93C4-4A0A-946F-F2E6ECD7B0A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C4133D8-93C4-4A0A-946F-F2E6ECD7B0A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2C4133D8-93C4-4A0A-946F-F2E6ECD7B0A0} = {53FF54AE-6A3D-4C86-BB99-D626DCACA05C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BF7960D-0813-4F25-9C28-E3081DDE19CF}
+	EndGlobalSection
+EndGlobal
