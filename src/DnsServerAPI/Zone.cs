@@ -1,17 +1,9 @@
 ﻿using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DnsServerAPI;
 
-public static class Zone
+internal static class Zone
 {
-
-    #region list, add, delete
 
     public static async Task<List<string>> List(HttpClient client, string token)
     {
@@ -40,7 +32,6 @@ public static class Zone
         bool success = JObject.Parse(res)["status"].ToString() == "ok";
         return success;
     }
-        
 
     public static async Task<bool> Delete(HttpClient client, string token, string zoneName)
     {
@@ -50,8 +41,6 @@ public static class Zone
         bool success = JObject.Parse(res)["status"].ToString() == "ok";
         return success;
     }
-
-    #endregion
 
     public static async Task<bool> IsValidZone(HttpClient client, string token, string zoneName)
     {
@@ -82,4 +71,5 @@ public static class Zone
         }
         return records;
     }
+
 }

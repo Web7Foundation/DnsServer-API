@@ -1,19 +1,21 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DnsServerAPI;
 
 public static class Utils
 {
-    // indents a json string
+    /// <summary>
+    /// indents a json string
+    /// </summary>
     public static string FormatJson(string json)
     {
         dynamic parsedJson = JsonConvert.DeserializeObject(json);
         return JsonConvert.SerializeObject(parsedJson, Formatting.Indented);
+    }
+
+    public static string AsURIString(string input)
+    {
+        return Uri.EscapeDataString(input);
     }
 
     /// <summary>

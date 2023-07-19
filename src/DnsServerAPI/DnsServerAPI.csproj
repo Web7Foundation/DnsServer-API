@@ -9,5 +9,11 @@
 	<ItemGroup>
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="TechnitiumLibrary.Net">
+	    <HintPath>_Dependencies\TechnitiumLibrary.Net.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
 	
 </Project>

@@ -1,7 +1,5 @@
-﻿
-using System.ComponentModel;
+﻿namespace DnsServerAPI;
 
-namespace DnsServerAPI;
 public class Api
 {
     private string _token;
@@ -54,6 +52,20 @@ public class Api
     #endregion
 
     #region record
+
+    /// <summary>
+    /// Adds a record to the specified zone. Returns the json response from the server.
+    /// Example usage for CNAME record in 'extralUrlParams' parameter: "&cname=example.com"
+    /// Example usage for TEXT record in 'extralUrlParams' parameter: "&text=foo"
+    /// 
+    /// See
+    /// <a href="https://github.com/TechnitiumSoftware/DnsServer/blob/master/APIDOCS.md#add-record">APIDOCS.md#add-record</a>
+    /// to see a list of url parameters.
+    /// </summary>
+    public async Task<string> AddRecord(string zoneName, string recordType, int ttl, bool overwrite, string comments, string extralUrlParams)
+    {
+        return await Record.Add(_http, _token, zoneName, recordType, ttl, overwrite, comments, extralUrlParams);
+    }
 
     #endregion
 
