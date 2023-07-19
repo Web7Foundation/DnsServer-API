@@ -16,6 +16,14 @@ foreach (var z in listofzones)
     Console.WriteLine(z);
 }
 
+var records = await api.ListZoneRecords("example.com");
+
+Console.WriteLine("\n[LIST RECORDS]");
+foreach (var r in records)
+{
+    Console.WriteLine(r);
+}
+
 await Task.Delay(1000);
 
 bool added = await api.AddZone("myexamplezone1234.com");
