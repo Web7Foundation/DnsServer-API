@@ -5,17 +5,12 @@ namespace DnsServerAPI;
 public static class Utils
 {
     /// <summary>
-    /// indents a json string
+    /// Indents a json string
     /// </summary>
     public static string FormatJson(string json)
     {
         dynamic parsedJson = JsonConvert.DeserializeObject(json);
         return JsonConvert.SerializeObject(parsedJson, Formatting.Indented);
-    }
-
-    public static string AsURIString(string input)
-    {
-        return Uri.EscapeDataString(input);
     }
 
     /// <summary>

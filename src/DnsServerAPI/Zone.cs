@@ -25,7 +25,10 @@ internal static class Zone
     }
 
     public static async Task<bool> Add(HttpClient client, string token, string zoneName)
-    {        
+    {
+        if (zoneName.StartsWith("did:"))
+            zoneName = Utils.ToDNS(zoneName);
+
         var req = await client.GetAsync($"/api/zones/create?token={token}&zone={zoneName}&type=Primary");
         var res = await req.Content.ReadAsStringAsync();
 
@@ -35,6 +38,9 @@ internal static class Zone
 
     public static async Task<bool> Delete(HttpClient client, string token, string zoneName)
     {
+        if (zoneName.StartsWith("did:"))
+            zoneName = Utils.ToDNS(zoneName);
+
         var req = await client.GetAsync($"/api/zones/delete?token={token}&zone={zoneName}");
         var res = await req.Content.ReadAsStringAsync();
 
@@ -44,6 +50,9 @@ internal static class Zone
 
     public static async Task<bool> IsValidZone(HttpClient client, string token, string zoneName)
     {
+        if (zoneName.StartsWith("did:"))
+            zoneName = Utils.ToDNS(zoneName);
+
         var req = await client.GetAsync($"/api/zones/records/get?token={token}&domain={zoneName}&zone={zoneName}&listZone=true");
         var res = await req.Content.ReadAsStringAsync();
 
@@ -55,6 +64,9 @@ internal static class Zone
 
     public static async Task<List<string>> ListZoneRecords(HttpClient client, string token, string zoneName)
     {
+        if (zoneName.StartsWith("did:"))
+            zoneName = Utils.ToDNS(zoneName);
+
         // get records
         var req = await client.GetAsync($"/api/zones/records/get?token={token}&domain={zoneName}&zone={zoneName}&listZone=true");
         var res = await req.Content.ReadAsStringAsync();

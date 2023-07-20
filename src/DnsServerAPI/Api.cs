@@ -62,9 +62,14 @@ public class Api
     /// <a href="https://github.com/TechnitiumSoftware/DnsServer/blob/master/APIDOCS.md#add-record">APIDOCS.md#add-record</a>
     /// to see a list of url parameters.
     /// </summary>
-    public async Task<string> AddRecord(string zoneName, string recordType, int ttl, bool overwrite, string comments, string extralUrlParams)
+    public async Task<string> AddRecord(string zoneName, string recordType, int ttl, bool overwrite, string? comments, string? extralUrlParams)
     {
-        return await Record.Add(_http, _token, zoneName, recordType, ttl, overwrite, comments, extralUrlParams);
+        return await Record.Add(_http, _token, zoneName, recordType, ttl, overwrite, comments ?? "", extralUrlParams ?? "");
+    }
+
+    public async Task<string> ADDRecordVMM(string zoneName, string subjectDid, string recordType, int ttl, bool overwrite, string? comments, DIDComm.VerificationMethodMap vmm)
+    {
+        return await Record.AddVMM(_http, _token, zoneName, subjectDid, recordType, ttl, overwrite, comments ?? "", vmm);
     }
 
     #endregion
