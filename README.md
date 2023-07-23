@@ -16,6 +16,8 @@ string token = await Auth.GetLoginToken(ADDRESS, USER, PASS);
 Api api = new(ADDRESS, token);
 ```
 
+> See [/src/Examples](https://github.com/Web7Foundation/DnsServer-API/tree/main/src/Examples) for example programs and in-depth usage.
+
 ## Features
 
 ### Zones
