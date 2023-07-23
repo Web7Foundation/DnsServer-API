@@ -17,9 +17,18 @@ Api api = new(ADDRESS, token);
 ```
 
 ## Features
+
+### Zones
 - List zones
 - List zone records
 - Add zone
 - Delete zone
+
+### Records
+- Add record
+- Delete record
+
+### Dns Client
+- Resolve to JSON string
 
  
