@@ -17,8 +17,8 @@ Api api = new(token, ADDRESS);
 // here is a TXT record example
 await api.AddRecord("example.did", "111.example.did", "TXT", 600, false, "a test comment", "&text=foo");
 
-// DIDID (the DID value will be the zoneName value you input ex. 'did:example:111')
-await api.AddRecord("did:example:111", "did:example:111", "DIDID", 600, false, null, null);
+// DIDID (the DID value will be the domain value you input ex. 'did:example:111')
+await api.AddRecord("did:example", "did:example:111", "DIDID", 600, false, null, null);
 
 // DIDPURP
 await api.AddRecord("did:example", "did:example:111", "DIDPURP", 600, false, null, "&purpose=the purpose of this is to be an example...");
@@ -36,11 +36,11 @@ await api.AddRecord("did:example", "did:example:111", "DIDAKA", 600, false, null
 await api.AddRecord("did:example", "did:example:111", "DIDCTLR", 600, false, null, "&controller=the 'controller' value goes here...");
 
 
-// This library contains DIDComm objects that you can pass through by doing the following:
+// This library contains VerificationMethodMap and ServiceMap types, here is how they can be used:
 
 // 1. [VERIFICATION METHOD MAP]
 // These are the record types you can use for verification method objects:
-// note: JsonKeyMap is a class that is contained in a VMM as a property
+// note: JsonKeyMap is a class that is contained in the VMM as a property
 
 // DIDVM
 // DIDAUTH
