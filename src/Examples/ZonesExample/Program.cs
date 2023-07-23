@@ -6,7 +6,7 @@ const string PASS = "admin";
 
 string token = await Auth.GetLoginToken(ADDRESS, USER, PASS);
 
-Api api = new(ADDRESS, token);
+Api api = new(token, ADDRESS);
 
 var listofzones = await api.ListZones();
 

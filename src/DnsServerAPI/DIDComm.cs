@@ -37,7 +37,7 @@ public class VerificationMethodMap
 
     public string ToUri()
     {
-        string url = "&vmm_controller=" + Uri.EscapeDataString(Controller) +
+        return "&vmm_controller=" + Uri.EscapeDataString(Controller) +
                "&vmm_type=" + Uri.EscapeDataString(Type_) +
                "&vmm_comment=" + Uri.EscapeDataString(Comment) +
                "&vmm_id=" + Uri.EscapeDataString(Id) +
@@ -51,12 +51,10 @@ public class VerificationMethodMap
                "&vmm_jwk_y=" + Uri.EscapeDataString(PublicKeyJwk.y) +
                "&vmm_jwk_kty=" + Uri.EscapeDataString(PublicKeyJwk.kty) +
                "&vmm_jwk_kid=" + Uri.EscapeDataString(PublicKeyJwk.kid);
-
-        return url;
     }
 }
 
-public class ServiceMap : TechnitiumLibrary.Net.Dns.ResourceRecords.ServiceMap 
+public class ServiceMap
 {
     public string Id { get; set; }
 
@@ -65,4 +63,12 @@ public class ServiceMap : TechnitiumLibrary.Net.Dns.ResourceRecords.ServiceMap
     public string Type_ { get; set; }
 
     public string ServiceEndpoint { get; set; }
+
+    public string ToUri()
+    {
+        return "&sm_id=" + Uri.EscapeDataString(Id) +
+               "&sm_serviceEndpoint=" + Uri.EscapeDataString(ServiceEndpoint) +
+               "&sm_type=" + Uri.EscapeDataString(Type_) +
+               "&sm_comment=" + Uri.EscapeDataString(Comment);
+    }
 }
