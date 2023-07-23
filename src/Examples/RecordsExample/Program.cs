@@ -17,7 +17,7 @@ Api api = new(token, ADDRESS);
 // here is a TXT record example
 await api.AddRecord("example.did", "111.example.did", "TXT", 600, false, "a test comment", "&text=foo");
 
-// DIDID (the DID value will be the the zoneName value you input ex. 'did:example:111')
+// DIDID (the DID value will be the zoneName value you input ex. 'did:example:111')
 await api.AddRecord("did:example:111", "did:example:111", "DIDID", 600, false, null, null);
 
 // DIDPURP
