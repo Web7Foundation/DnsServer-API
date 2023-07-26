@@ -89,7 +89,7 @@ public class Api
 
     #region dns client
 
-    public async Task<string> DnsClientResolveToJson(string domain, string type = "ANY", string server = "this-server", Protocol protocol = Protocol.Udp)
+    public async Task<string> DnsClientResolveToJson(string domain, string type = "ANY", string server = "this-server", Protocol protocol = Protocol.Tcp)
     {
         return await DnsClient.ResolveToJson(_http, _token, domain, type, server, protocol);
     }
