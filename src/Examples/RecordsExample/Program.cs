@@ -35,6 +35,10 @@ await api.AddRecord("did:example", "did:example:111", "DIDAKA", 600, false, null
 // DIDCTLR
 await api.AddRecord("did:example", "did:example:111", "DIDCTLR", 600, false, null, "&controller=the 'controller' value goes here...");
 
+// DIDSIG
+await api.AddRecord("did:example", "did:example:111", "DIDSIG", 600, false, null, "&signature=the 'signature' value goes here...");
+
+
 
 // This library contains VerificationMethodMap and ServiceMap types, here is how they can be used:
 
@@ -124,6 +128,9 @@ await api.DeleteRecord("did:example", "did:example:111", "DIDAKA", "&alsoKnownAs
 
 // DIDCTLR
 await api.DeleteRecord("did:example", "did:example:111", "DIDCTLR", "&controller=the 'controller' value goes here...");
+
+// DIDSIG
+await api.DeleteRecord("did:example", "did:example:111", "DIDSIG", "&signature=the 'signature' value goes here...");
 
 
 // Verification Method Map

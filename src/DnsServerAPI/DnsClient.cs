@@ -1,6 +1,4 @@
-﻿using static System.Net.WebRequestMethods;
-
-namespace DnsServerAPI;
+﻿namespace DnsServerAPI;
 
 public enum Protocol
 {
@@ -13,8 +11,6 @@ public enum Protocol
 
 public static class DnsClient
 {
-    // TODO: Implement DNS Client 
-
     // https://github.com/TechnitiumSoftware/DnsServer/blob/master/APIDOCS.md#dns-client-api-calls
     public static async Task<string> ResolveToJson(HttpClient http, string token, string domain, string type, string server, Protocol protocol)
     {
