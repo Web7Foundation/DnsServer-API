@@ -85,6 +85,19 @@ public class Api
         return await Record.Delete(_http, _token, zone, domain, type, urlParams);
     }
 
+    /// <summary>
+    /// Updates a record in a zone. Returns the JSON response from the server.
+    /// Example usage for CNAME record in 'urlParams' parameter: "&cname=example.com"
+    /// Example usage for TEXT record in 'urlParams' parameter: "&text=foo"
+    /// See
+    /// <a href="https://github.com/TechnitiumSoftware/DnsServer/blob/master/APIDOCS.md#update-record">APIDOCS.md#add-record</a>
+    /// to see a list of url parameters.
+    /// </summary>
+    public async Task<string> UpdateRecord(string zone, string domain, string newDomain, string type, int ttl, string comments, bool disable, string urlParams)
+    {
+        return await Record.Update(_http, _token, zone, domain, newDomain, type, ttl, comments, disable, urlParams);
+    }
+
     #endregion
 
     #region dns client
