@@ -60,19 +60,11 @@ VerificationMethodMap vmm = new()
     Controller = "did:example:111",
     Comment = "example comment.",
     Type_ = "Ed25519VerificationKey2018",
-    PublicKeyMultibase = "111222333",
-    PublicKeyJwk = new JSONKeyMap()
-    {
-        crv = "crv",
-        e = "e",
-        n = "n",
-        x = "x",
-        y = "y",
-        kty = "kty",
-        kid = "kid",
-    },
-    PublicKeyBase58 = "11156",
-    PrivateKeyBase58 = "abcdefg"
+    keyPublicJsonWebKey = "{ \"foo\": 123 }",
+    keyPublicJsonWebKeyString = "{ \"bar\": 456 }",
+    publicKeyMultibase = "{ \"hello\": \"world\" }",
+    publicKeyJwk = "{ \"numbers\": \"123456789\" }",
+    
 };
 
 // use the ToUri() method to get the url parameters for the verification method map
