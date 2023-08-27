@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DnsServerAPI", "DnsServerAP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZonesExample", "Examples\ZonesExample\ZonesExample.csproj", "{2C4133D8-93C4-4A0A-946F-F2E6ECD7B0A0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecordsExample", "Examples\RecordsExample\RecordsExample.csproj", "{032986B6-5CAA-4967-BB42-6ED9F5875C90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DnsClientExample", "Examples\DnsClientExample\DnsClientExample.csproj", "{619DC99D-D71A-43A3-BB85-C7462DC9E1EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnsClientExample", "Examples\DnsClientExample\DnsClientExample.csproj", "{619DC99D-D71A-43A3-BB85-C7462DC9E1EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpdateRecordsExample", "Examples\UpdateRecordsExample\UpdateRecordsExample.csproj", "{2DF4DF17-F970-44B0-93FD-55AB3173A653}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddDeleteRecordsExample", "Examples\AddDeleteRecordsExample\AddDeleteRecordsExample.csproj", "{B8949363-3705-43A4-B177-64735C257D6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,22 +29,27 @@ Global
 		{2C4133D8-93C4-4A0A-946F-F2E6ECD7B0A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C4133D8-93C4-4A0A-946F-F2E6ECD7B0A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C4133D8-93C4-4A0A-946F-F2E6ECD7B0A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{032986B6-5CAA-4967-BB42-6ED9F5875C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{032986B6-5CAA-4967-BB42-6ED9F5875C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{032986B6-5CAA-4967-BB42-6ED9F5875C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{032986B6-5CAA-4967-BB42-6ED9F5875C90}.Release|Any CPU.Build.0 = Release|Any CPU
 		{619DC99D-D71A-43A3-BB85-C7462DC9E1EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{619DC99D-D71A-43A3-BB85-C7462DC9E1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{619DC99D-D71A-43A3-BB85-C7462DC9E1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{619DC99D-D71A-43A3-BB85-C7462DC9E1EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DF4DF17-F970-44B0-93FD-55AB3173A653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DF4DF17-F970-44B0-93FD-55AB3173A653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DF4DF17-F970-44B0-93FD-55AB3173A653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DF4DF17-F970-44B0-93FD-55AB3173A653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8949363-3705-43A4-B177-64735C257D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8949363-3705-43A4-B177-64735C257D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8949363-3705-43A4-B177-64735C257D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8949363-3705-43A4-B177-64735C257D6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2C4133D8-93C4-4A0A-946F-F2E6ECD7B0A0} = {53FF54AE-6A3D-4C86-BB99-D626DCACA05C}
-		{032986B6-5CAA-4967-BB42-6ED9F5875C90} = {53FF54AE-6A3D-4C86-BB99-D626DCACA05C}
 		{619DC99D-D71A-43A3-BB85-C7462DC9E1EE} = {53FF54AE-6A3D-4C86-BB99-D626DCACA05C}
+		{2DF4DF17-F970-44B0-93FD-55AB3173A653} = {53FF54AE-6A3D-4C86-BB99-D626DCACA05C}
+		{B8949363-3705-43A4-B177-64735C257D6C} = {53FF54AE-6A3D-4C86-BB99-D626DCACA05C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BF7960D-0813-4F25-9C28-E3081DDE19CF}
