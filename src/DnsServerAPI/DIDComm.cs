@@ -1,39 +1,15 @@
 ﻿namespace DnsServerAPI.DIDComm;
 
-public class JSONKeyMap
-{
-    public string crv { get; set; } = "";
-
-    public string e { get; set; } = "";
-
-    public string n { get; set; } = "";
-
-    public string x { get; set; } = "";
-
-    public string y { get; set; } = "";
-
-    public string kty { get; set; } = "";
-
-    public string kid { get; set; } = "";
-}
-
 public class VerificationMethodMap
 {
-    public string Id { get; set; } = "";
-
-    public string Comment { get; set; } = "";
-
-    public string Type_ { get; set; } = "";
-
-    public string Controller { get; set; } = "";
-
-    public string PublicKeyMultibase { get; set; } = "";
-
-    public JSONKeyMap PublicKeyJwk { get; set; } = new();
-
-    public string PublicKeyBase58 { get; set; } = "";
-
-    public string PrivateKeyBase58 { get; set; } = "";
+    public string Id { get; set; }
+    public string Comment { get; set; }
+    public string Type_ { get; set; }
+    public string Controller { get; set; }
+    public string keyPublicJsonWebKey { get; set; }            // STRING (Json Text) Web7.TrustLibrary.Did.DIDDocumenter() - JsonWebKeyDotnet6
+    public string keyPublicJsonWebKeyString { get; set; }      // STRING (Json Text)
+    public string publicKeyMultibase { get; set; }             // STRING (Json Text)
+    public string publicKeyJwk { get; set; }
 
     public string ToUri()
     {
@@ -41,16 +17,10 @@ public class VerificationMethodMap
                "&vmm_type=" + Uri.EscapeDataString(Type_) +
                "&vmm_comment=" + Uri.EscapeDataString(Comment) +
                "&vmm_id=" + Uri.EscapeDataString(Id) +
-               "&vmm_publicKeyMultibase=" + Uri.EscapeDataString(PublicKeyMultibase) +
-               "&vmm_publicKeyBase58=" + Uri.EscapeDataString(PublicKeyBase58) +
-               "&vmm_privateKeyBase58=" + Uri.EscapeDataString(PrivateKeyBase58) +
-               "&vmm_jwk_crv=" + Uri.EscapeDataString(PublicKeyJwk.crv) +
-               "&vmm_jwk_e=" + Uri.EscapeDataString(PublicKeyJwk.e) +
-               "&vmm_jwk_n=" + Uri.EscapeDataString(PublicKeyJwk.n) +
-               "&vmm_jwk_x=" + Uri.EscapeDataString(PublicKeyJwk.x) +
-               "&vmm_jwk_y=" + Uri.EscapeDataString(PublicKeyJwk.y) +
-               "&vmm_jwk_kty=" + Uri.EscapeDataString(PublicKeyJwk.kty) +
-               "&vmm_jwk_kid=" + Uri.EscapeDataString(PublicKeyJwk.kid);
+               "&vmm_keyPublicJsonWebKey=" + Uri.EscapeDataString(keyPublicJsonWebKey) +
+               "&vmm_keyPublicJsonWebKeyString=" + Uri.EscapeDataString(keyPublicJsonWebKeyString) +
+               "&vmm_publicKeyMultibase=" + Uri.EscapeDataString(publicKeyMultibase) +
+               "&vmm_publicKeyJwk=" + Uri.EscapeDataString(publicKeyJwk);
     }
 }
 
